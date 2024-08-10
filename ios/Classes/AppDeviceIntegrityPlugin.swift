@@ -15,25 +15,25 @@ public static func register(with registrar: FlutterPluginRegistrar) {
       case "getAttestationServiceSupport":
           guard let args = call.arguments else {
               result(FlutterError(code: "-1", message: "iOS could not extract " +
-                                  "flutter arguments in method: (getAttestationServiceSupport)", details: nil))
+                                  "flutter arguments in method: (getAttestationServiceSupport) 1", details: nil))
               return
           }
 
           guard let myArgs = args as? [String: Any] else {
               result(FlutterError(code: "-1", message: "iOS could not extract " +
-                                  "flutter arguments in method: (getAttestationServiceSupport)", details: nil))
+                                  "flutter arguments in method: (getAttestationServiceSupport) 2", details: nil))
               return
           }
 
           guard let challengeString = myArgs["challengeString"] as? String else {
               result(FlutterError(code: "-1", message: "iOS could not extract " +
-                                  "flutter arguments in method: (getAttestationServiceSupport)", details: nil))
+                                  "flutter arguments in method: (getAttestationServiceSupport) 3", details: nil))
               return
           }
 
           guard let attest = AppDeviceIntegrity(challengeString: challengeString) else {
               result(FlutterError(code: "-1", message: "iOS could not extract " +
-                                  "flutter arguments in method: (getAttestationServiceSupport)", details: nil))
+                                  "flutter arguments in method: (getAttestationServiceSupport) 4", details: nil))
               return
           }
 
@@ -54,7 +54,7 @@ public static func register(with registrar: FlutterPluginRegistrar) {
               }
           } else {
               result(FlutterError(code: "-1", message: "iOS could not extract " +
-                                  "flutter arguments in method: (getAttestationServiceSupport)", details: nil))
+                                  "flutter arguments in method: (getAttestationServiceSupport) 5", details: nil))
               return
           }
     default:
